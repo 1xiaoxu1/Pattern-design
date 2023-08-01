@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.tables {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+.tables thead tr {
+  height: 50px;
+  border-bottom: 2px solid #ebebeb;
+  text-align: center;
+}
+.tables thead tr th {
+  color: #606266;
+}
+.tables tbody tr {
+  height: 50px;
+  border-bottom: 1px solid #ebebeb;
+  text-align: center;
+}
+.tables tbody tr:hover {
+  background-color: #fafafa;
+  cursor: pointer;
+}
+.tables tbody td {
+  color: gray;
+}
+.table {
+  border: 1px solid #ebebeb;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+.table thead tr {
+  height: 50px;
+  border: 1px solid #ebebeb;
+}
+.table thead tr th {
+  border: 1px solid #ebebeb;
+  color: gray;
+}
+.table tbody tr {
+  height: 50px;
+  border: 1px solid #ebebeb;
+}
+.table tbody tr:hover {
+  background-color: #fafafa;
+  cursor: pointer;
+}
+.table tbody td {
+  border: 1px solid #ebebeb;
+  color: gray;
+}
+.tab {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+.tab thead tr {
+  height: 50px;
+  border-bottom: 2px solid #ebebeb;
+}
+.tab thead tr th {
+  color: #606266;
+}
+.tab tbody tr {
+  height: 50px;
+  border-bottom: 1px solid #ebebeb;
+}
+.tab tbody tr:hover {
+  background-color: #fafafa;
+  cursor: pointer;
+}
+.tab tbody td {
+  color: gray;
+}
+.tab tbody:nth-child(2n) {
+  background-color: #f0f0f4;
+}
