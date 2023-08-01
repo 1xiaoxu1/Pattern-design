@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import './Tabs.module.less';
-import { ButtonProps, NativeButtonProps } from './interface';
-declare const Button: FC<ButtonProps & NativeButtonProps>;
-export default Button;
+import './Table.module.less';
+import { TableProps, NativeTableProps } from './interface';
+declare const Table: FC<TableProps & NativeTableProps>;
+export default Table;

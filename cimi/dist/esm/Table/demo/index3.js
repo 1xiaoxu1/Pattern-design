@@ -1,5 +1,5 @@
 import React from "react";
-import Tab from '..';
+import Table from '..';
 export default function index1() {
   var tableData = [{
     date: '2016-05-02',
@@ -19,7 +19,7 @@ export default function index1() {
     address: '上海市普陀区金沙江路 1516 弄'
   }];
   var columns = ['日期', '姓名', '地址'];
-  return /*#__PURE__*/React.createElement(Tab, {
+  return /*#__PURE__*/React.createElement(Table, {
     columns: columns,
     items: tableData,
     cell: true

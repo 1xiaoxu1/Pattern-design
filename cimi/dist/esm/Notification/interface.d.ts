@@ -1,35 +1,25 @@
 /// <reference types="react" />
-export interface NotProps {
+export interface NotificationProps {
     /**
-     * @description 按钮主题
-     * @default info
+     * @description 自定义标题
+     * @default 标题
      */
-    type?: String;
+    info?: String;
     /**
-     * @description 宽度
+     * @description 自定义内容
+     * @default  这里是一个消息提示
      */
-    width?: Number;
+    message?: any;
     /**
-     * @description 高度
+     * @description 自定义图标
+     * @default
      */
-    height?: Number;
-    show?: boolean;
+    icon?: String;
     /**
-     * @description 通知提醒内容
+     * @description 设置是否自动关闭
+     * @default  fasle
      */
-    description?: String;
-    /**
-     * @description 通知提醒标题
-     */
-    message?: String;
-    /**
-    * @description 设置延时器
-    */
-    duration?: number;
+    requireInteraction?: Boolean;
+    children?: any;
 }
-export interface NotStyle {
-    description?: String;
-    duration?: number;
-    topleft?: number;
-}
-export declare type NotsProps = Omit<React.AllHTMLAttributes<HTMLElement>, 'type'>;
+export declare type NativeNotificationProps = Omit<React.HTMLAttributes<HTMLElement>, 'title'>;

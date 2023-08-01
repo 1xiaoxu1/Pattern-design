@@ -16,20 +16,23 @@ export default (function () {
     setFlag(!flag);
   };
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(MessageBox, {
+    title: /*#__PURE__*/React.createElement("div", {
+      style: {
+        textAlign: 'center'
+      }
+    }, "Modal Title"),
     isFlag: flag,
     onOk: function onOk() {
       setFlag(false);
-      console.log('触发确认按钮');
     },
-    nCancel: function nCancel() {
+    onCancel: function onCancel() {
       setFlag(false);
-      console.log('触发取消按钮');
     },
     onFocus: function onFocus() {
       changeShow();
       console.log('点击x按钮触发事件');
     }
-  }), /*#__PURE__*/React.createElement("button", {
+  }, "You can customize modal body text by the current situation. This modal will be closed immediately once you press the OK button."), /*#__PURE__*/React.createElement("button", {
     onClick: function onClick() {
       return changeShow();
     },

@@ -11,25 +11,43 @@ export default (function () {
     _useState2 = _slicedToArray(_useState, 2),
     flag = _useState2[0],
     setFlag = _useState2[1];
+  var _useState3 = useState(false),
+    _useState4 = _slicedToArray(_useState3, 2),
+    flag1 = _useState4[0],
+    setFlag1 = _useState4[1];
   var changeShow = function changeShow() {
     console.log(flag);
     setFlag(!flag);
   };
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(MessageBox, {
+  var changeFlag = function changeFlag() {
+    console.log(flag);
+    setFlag1(!flag1);
+  };
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      justifyContent: 'space-around',
+      alignItems: 'center',
+      width: '300px'
+    }
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(MessageBox, {
+    title: /*#__PURE__*/React.createElement("div", {
+      style: {
+        textAlign: 'left'
+      }
+    }, "Modal Title"),
     isFlag: flag,
     onOk: function onOk() {
       setFlag(false);
-      console.log('触发确认按钮');
     },
-    nCancel: function nCancel() {
+    onCancel: function onCancel() {
       setFlag(false);
-      console.log('触发取消按钮');
     },
     onFocus: function onFocus() {
       changeShow();
       console.log('点击x按钮触发事件');
     }
-  }), /*#__PURE__*/React.createElement("button", {
+  }, "You can customize modal body text by the current situation. This modal will be closed immediately once you press the OK button."), /*#__PURE__*/React.createElement("button", {
     onClick: function onClick() {
       return changeShow();
     },
@@ -40,5 +58,33 @@ export default (function () {
       borderRadius: '5px',
       border: 'none'
     }
-  }, "\u70B9\u51FB\u663E\u793A"));
+  }, "Left Title")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(MessageBox, {
+    title: /*#__PURE__*/React.createElement("div", {
+      style: {
+        textAlign: 'center'
+      }
+    }, "Modal Title"),
+    isFlag: flag1,
+    onOk: function onOk() {
+      setFlag1(false);
+    },
+    onCancel: function onCancel() {
+      setFlag1(false);
+    },
+    onFocus: function onFocus() {
+      changeShow();
+      console.log('点击x按钮触发事件');
+    }
+  }, "You can customize modal body text by the current situation. This modal will be closed immediately once you press the OK button."), /*#__PURE__*/React.createElement("button", {
+    onClick: function onClick() {
+      return changeShow();
+    },
+    style: {
+      backgroundColor: '#3c7eff',
+      color: 'white',
+      padding: '10px 20px',
+      borderRadius: '5px',
+      border: 'none'
+    }
+  }, "Center Title")));
 });

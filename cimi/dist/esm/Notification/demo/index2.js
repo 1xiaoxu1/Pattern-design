@@ -1,9 +1,9 @@
 import React from 'react';
-import Notification from '..';
-export default function index2() {
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Notification, {
-    description: "通知内容",
-    message: "标题",
-    duration: 2000
-  }, "\u5EF6\u8FDF\u901A\u77E5"));
+import BwNotification from '..';
+import Button from "../../Button";
+export default function NotificationDemo() {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(BwNotification, {
+    info: "\u7B2C\u4E00\u6B21\u5C1D\u8BD5",
+    message: "\u8FD9\u91CC\u662F\u5185\u5BB9\u533A\u57DF"
+  }, /*#__PURE__*/React.createElement(Button, null, "\u663E\u793A\u901A\u77E5")));
 }

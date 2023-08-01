@@ -1,15 +1,15 @@
 import React, { useMemo, memo } from 'react';
-import "./Container.module.less";
+import Css from "./Container.module.less";
 export var Container = /*#__PURE__*/memo(function (props) {
   var type = props.type,
     width = props.width,
     height = props.height,
     children = props.children;
   var containerStyle = useMemo(function () {
-    if (!type && type !== "style") {
-      return "or-container";
+    if (!type && type !== 'style') {
+      return "";
     }
-    return type;
+    return Css["style"];
   }, [type]);
   var containerSize = useMemo(function () {
     var size = {
@@ -52,7 +52,7 @@ export var Header = /*#__PURE__*/memo(function (props) {
     return size;
   }, [width, height]);
   return /*#__PURE__*/React.createElement("div", {
-    className: "or-header",
+    className: Css.header,
     style: headerSize
   }, children);
 });
@@ -79,7 +79,7 @@ export var Aside = /*#__PURE__*/memo(function (props) {
     return size;
   }, [width, height]);
   return /*#__PURE__*/React.createElement("div", {
-    className: "or-aside",
+    className: Css.aside,
     style: asideSize
   }, children);
 });
@@ -106,7 +106,7 @@ export var Main = /*#__PURE__*/memo(function (props) {
     return size;
   }, [width, height]);
   return /*#__PURE__*/React.createElement("div", {
-    className: "or-main",
+    className: Css.main,
     style: mainSize
   }, children);
 });
@@ -133,7 +133,7 @@ export var Footer = /*#__PURE__*/memo(function (props) {
     return size;
   }, [width, height]);
   return /*#__PURE__*/React.createElement("div", {
-    className: "or-footer",
+    className: Css.footer,
     style: footerSize
   }, children);
 });
