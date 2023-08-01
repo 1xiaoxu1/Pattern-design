@@ -1,5 +1,5 @@
 /// <reference types="react" />
-export interface ButtonProps {
+export interface TableProps {
     /**
      * @description 按钮主题
      * @default info
@@ -19,6 +19,6 @@ export interface ButtonProps {
     dataSource?: any;
     cell?: any;
 }
-export interface ButtonStyle {
+export interface TableStyle {
 }
-export declare type NativeButtonProps = Omit<React.AllHTMLAttributes<HTMLElement>, 'type'>;
+export declare type NativeTableProps = Omit<React.AllHTMLAttributes<HTMLElement>, 'type'>;
