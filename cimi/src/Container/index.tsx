@@ -1,14 +1,14 @@
 import React, { useMemo, FC, memo } from 'react';
-import './Container.module.less';
+import Css from './Container.module.less';
 import { ContainerProps, ContainerStyle } from './interface';
 
 export const Container: FC<ContainerProps> = memo((props) => {
   const { type, width, height, children } = props;
   const containerStyle = useMemo(() => {
-    if (!type && type !== "style") {
-      return "or-container"
+    if (!type && type !== 'style') {
+      return ""
     }
-    return type as any;
+    return Css["style"] as any;
   }, [type]);
   const containerSize = useMemo(() => {
     var size: ContainerStyle = {
@@ -53,7 +53,7 @@ export const Header: FC<ContainerProps> = memo((props) => {
   }, [width, height]);
 
   return (
-    <div className="or-header"
+    <div className={Css.header}
       style={headerSize as any}
     >
       {children}
@@ -81,7 +81,7 @@ export const Aside: FC<ContainerProps> = memo((props) => {
   }, [width, height]);
 
   return (
-    <div className="or-aside"
+    <div className={Css.aside}
       style={asideSize as any}
     >
       {children}
@@ -109,7 +109,7 @@ export const Main: FC<ContainerProps> = memo((props) => {
   }, [width, height]);
 
   return (
-    <div className="or-main"
+    <div className={Css.main}
       style={mainSize as any}
     >
       {children}
@@ -138,7 +138,7 @@ export const Footer: FC<ContainerProps> = memo((props) => {
   }, [width, height]);
 
   return (
-    <div className="or-footer"
+    <div className={Css.footer}
       style={footerSize as any}
     >
       {children}
