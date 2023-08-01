@@ -1,10 +1,11 @@
 ---
 title: Link链接
 nav:
-  title: Basic 基础组件
+  title: Basic基础
   path: /component
 group:
-  path: /basic
+  title: Basic基础
+  path: /component/Basic
 ---
 
 # link 链接
