@@ -1,11 +1,11 @@
-# Pattern-ui
+# pattern-el
 
 ## Getting Started
 
 - 安装
 
 ```bash
-$ npm i Pattern-ui -D
+$ npm i pattern-el -D
 ```
 
 - 使用
