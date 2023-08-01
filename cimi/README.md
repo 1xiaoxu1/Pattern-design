@@ -5,14 +5,14 @@
 - 安装
 
 ```bash
-$ npm i pattern-el -D
+$ npm i pattern-design -D
 ```
 
 - 使用
 
 ```js
-import { Button } from 'Pattern-ui'
-import 'Pattern-ui/dist/index.css'
+import { Button } from 'pattern-design'
+import 'pattern-design/dist/index.css'
 function App(){
     return (
         <Button>测试</Button>
