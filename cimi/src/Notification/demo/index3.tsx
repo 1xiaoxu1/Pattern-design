@@ -1,17 +1,17 @@
-
-import React from 'react'
-import Notification from '..'
-
-
-export default function index2() {
+import React from 'react';
+import BwNotification from '..';
+import Button from '../../Button';
+export default function NotificationDemo() {
   return (
     <div>
-      <Notification description={"通知内容"} message={"标题"} duration={3000}  type="topLeft">左上角</Notification> 
-      <Notification description={"通知内容"} message={"标题"}  duration={3000}  type="topRight">右上角</Notification> 
-      <Notification description={"通知内容"} message={"标题"}  duration={3000}  type="bottomLeft">左下角</Notification> 
-      <Notification description={"通知内容"} message={"标题"}  duration={3000}  type="bottomRight">右下角</Notification> 
-
-
+      <BwNotification
+        requireInteraction={true}
+        icon="https://cn.bing.com/sa/simg/favicon-trans-bg-blue-mg.ico"
+        info="第一次尝试"
+        message="kukkukuk"
+      >
+        <Button>显示通知</Button>
+      </BwNotification>
     </div>
-  )
+  );
 }

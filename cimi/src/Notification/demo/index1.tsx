@@ -1,9 +1,12 @@
-import React from 'react'
-import Notification from '..'
-export default function index1() {
+import React from 'react';
+import BwNotification from '..';
+import Button from '../../Button';
+export default function NotificationDemo() {
   return (
     <div>
-      <Notification description={"通知内容"} message={"标题"} > 通知弹框</Notification> 
-      </div>
-  )
+      <BwNotification>
+        <Button>显示通知</Button>
+      </BwNotification>
+    </div>
+  );
 }

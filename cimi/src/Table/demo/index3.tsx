@@ -1,6 +1,6 @@
 
 import React from "react";
-import Tab from '..'
+import Table from '..'
 
 
 export default function index1() {
@@ -24,6 +24,6 @@ export default function index1() {
  
   const columns=['日期','姓名','地址']
   return(
-     <Tab columns={columns} items={tableData}  cell />
+     <Table columns={columns} items={tableData}  cell />
      )
 }

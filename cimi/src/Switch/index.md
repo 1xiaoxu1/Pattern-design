@@ -1,14 +1,14 @@
 ---
-title: Switch 开关
+title: Switch
 nav:
-  title: Form
+  title: Form表单
   path: /component
 group:
-  title: Form
+  title: Form表单
   path: /component/Form
 ---
 
-# Switch 开关
+# Switch开关
 
 ### 基础用法
 

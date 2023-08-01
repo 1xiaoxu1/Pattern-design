@@ -1,60 +1,53 @@
-//useMemo 用来缓存计算结果 依赖项发生变化时会重新计算
-import React,{ memo, useMemo,FC ,useRef, Children, useEffect} from "react";
-import './Notification.module.less'
-import { NotProps,NotStyle,NotsProps} from './interface' ;
-
-const Not: FC<NotProps & NotsProps> = memo((props) => {
-    // console.log(props);
-    
-    const { type, width, height,duration,children } = props;
-    const NotStyle = useMemo(() => {
-        if (!type && type !== 'topLeft' ) {
-            return 'navs';
-        }
-        return type as any;
-    }, [type]);
-    
-
-    // 点击按钮出现
-    function onchange(){
-        if(divref.current){
-            divref.current.hidden=false ;
-        }
-        console.log(divref);
-        // 如果duration存在 执行延时器
-        if(duration){
-            setTimeout(()=>{
-                if(divref.current){
-                    divref.current.hidden= true;
-                } 
-            },duration)
-        }
+import React, { FC, memo, useMemo } from 'react';
+import { NotificationProps, NativeNotificationProps } from './interface';
+import Css from './index.module.less';
+const BwNotification: FC<NotificationProps & NativeNotificationProps> = memo((props) => {
+  let { info, message, icon, requireInteraction, children } = props;
+  const newIcon: any = icon;
+  const newRequireInteraction: any = requireInteraction;
+  const newMessage = useMemo(() => {
+    if (!message) {
+      message = '这里是一个消息提示';
+      return message;
     }
-    // 初始化的时候 隐藏
-    useEffect(()=>{
-        if(divref.current){
-            divref.current.hidden=true
-        }
-    },[])
-   
-    const divref =useRef<HTMLDivElement>(null);
-    //  点击x 消失
-    function change(){
-        // console.log(divref.current.hidden);
-        if(divref.current){
-            divref.current.hidden=true;
-        }        
+    return message;
+  }, [message]);
+  const newTitle: any = useMemo(() => {
+    if (!info) {
+      info = '标题';
+      return info;
     }
-    return (
-         <div className="container">
-            <button  className='button' onClick={()=>onchange()}>{children}</button>
-            <div className={NotStyle} ref={divref}>
-               <div className="error" onClick={()=>change()}>x</div>
-               <h3>{props.message} </h3>
-               <div>{props.description} </div>
-            </div>
-         </div>
-    );
+    return info;
+  }, [info]);
+
+  const notify = () => {
+    if (!('Notification' in window)) {
+      alert('如果您的浏览器不支持跳转，请点击此处！');
+    } else if (Notification.permission === 'granted') {
+      const notification = new Notification(newTitle, {
+        body: newMessage,
+        icon: newIcon,
+        requireInteraction: newRequireInteraction,
+      });
+    } else if (Notification.permission !== 'denied') {
+      //用于取得用户同意
+      //“granted”（状态值：0）表示用户同意消息提醒；
+      // “default”（状态值：1）表示默认状态，用户既未拒绝，也未同意；
+      //“denied”（状态值：1）表示用户拒绝消息提醒。
+      //只有在状态值为0的时候才能够允许消息提醒
+      Notification.requestPermission().then((permission) => {
+        if (permission === 'granted') {
+          const notification = new Notification('测试消息弹出');
+        }
+      });
+    }
+  };
+
+  return (
+    <div className={Css['notification']} onClick={notify}>
+      {children ? children : '显示通知'}
+    </div>
+  );
 });
 
-export default Not;
+export default BwNotification;

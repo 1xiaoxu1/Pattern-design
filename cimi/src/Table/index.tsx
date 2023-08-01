@@ -1,24 +1,11 @@
 import React, { useMemo, FC, memo, } from 'react';
-import './Tabs.module.less'
-import { ButtonProps, ButtonStyle, NativeButtonProps } from './interface';
+import './Table.module.less'
+import { TableProps, TableStyle, NativeTableProps } from './interface';
 
-const Button: FC<ButtonProps & NativeButtonProps> = memo((props) => {
+const Table: FC<TableProps & NativeTableProps> = memo((props) => {
     console.log(props);
 
     const { type, columns, children, show,cell } = props;
-    // console.log(columns);
-    const buttonStyle = useMemo(() => {
-        if (!type && type !== 'warning' && type !== 'success' && type !== 'danger' && type !== 'primary') {
-            return 'tabs';
-        }
-        return type as any;
-    }, [type]);
-    // const buttonSize = useMemo(() => {
-
-    // }, []);
-
-
-
 
     return (
         
@@ -53,4 +40,4 @@ const Button: FC<ButtonProps & NativeButtonProps> = memo((props) => {
     );
 });
 
-export default Button;
+export default Table;

@@ -1,59 +1,38 @@
-export interface MessageBoxProps {
-  //自定义container接口
-
+export interface MessageBoxObj {
   /**
-   * @description MessageBox
-   * 标签选项
-   * 
-   */
-  option?: any;
-  /**
-  * @description 内容区选项
-  * 
+  * @description 提示标题
+  * @default Module
   */
-  option1?: any;
-  /**
-* @description MessageBox
-标签选项 子选项
-*
-*/
-  item?: String;
-  /**
-* @description 索引值
-*
-*/
-  i?: Number;
-  /**
-* @description 判断是哪一个样式
-*
-*/
-  style?: any;
-  /**
-* @description 判断是哪一个盒子
-*
-*/
-  box?: any;
-  /**
-    * @description alter 信息
-    *
-    */
-  message?: any;
-  /**
-   * @description 判断样式
-   *
-   */
-  confirm?: any;
-  /**
- * @description 表示弹窗信息
- *
- */
-  data?: any;
-}
+  title?: string,
 
-export interface MessageBoxStyle {
-  width?: String;
-  height?: String;
-  cursor?: String;
-  value?: any
+  /**
+  * @description 提示内容
+  * @default string
+  */
+  children?: string,
+
+   /**
+  * @description 点击确认按钮触发事件
+  * @default Function
+  */
+   onOk: any,
+
+    /**
+  * @description 点击取消按钮触发事件
+  * @default Function
+  */
+    onCancel: any,
+
+  /**
+  * @description 点击右上角关闭按钮触发事件
+  * @default Funtcion
+  */ 
+   onFocus?: any,
+
+
+  /**
+  * @description 用户输入日期字符串
+  * @default 'new Date()'
+  */
+     isFlag?:boolean
 }
-export type NativeMessageBoxProps = Omit<React.HTMLAttributes<HTMLElement>, 'type'>; //原生button接口

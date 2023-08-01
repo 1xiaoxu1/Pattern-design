@@ -1,5 +1,5 @@
 ---
-title: MessageBox 弹框
+title:  MessageBox 组件
 nav:
   title: Notice通知
   path: /component
@@ -8,23 +8,17 @@ group:
   path: /component/Notice
 ---
 
-# MessageBox 弹框
+# MessageBox 组件
 
-模拟系统的消息提示框而实现的一套模态对话框组件，用于消息提示、确认消息。
+## 默认样式
+<code src='./demo/index1.jsx'>
 
-## 基础用法
+## 自定义内容
+<code src='./demo/index2.jsx'>
 
-基础的、简洁的标签页。
-<code src="./demo/index1.tsx" />
+## 自定义title位置
+<code src='./demo/index3.jsx'>
 
-## 确认消息
-
-提示用户确认其已经触发的动作，并询问是否进行此操作时会用到此对话框。
-
-<code src="./demo/index2.tsx" />
-
-<!-- ## 卡片化
-卡片化的标签页。
-<code src="./demo/index3.tsx" />  -->
-
-<API></API>
+## 
+<code src='./demo/index4.jsx'>
+<API src="./MessageBox.tsx"></API>
