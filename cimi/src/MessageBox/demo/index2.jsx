@@ -20,7 +20,7 @@ export default () => {
         <p>Some content...</p>
         <p>Some content...</p>
       </MessageBox>
-      <button onClick={() => changeShow()} style={{ backgroundColor: '#3c7eff', color: 'white', padding: '10px 20px', borderRadius: '5px', border: 'none' }}>点击显示</button>
+      <button onClick={() => changeShow()} style={{ backgroundColor: '#3c7eff', color: 'white', width: "80px", height: "30px", borderRadius: '5px', border: 'none', padding: "5px 10px" }}>点击显示</button>
     </div>
   )
 }

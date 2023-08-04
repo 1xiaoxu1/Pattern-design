@@ -30,7 +30,7 @@ export default () => {
         >
           You can customize modal body text by the current situation. This modal will be closed immediately once you press the OK button.
         </MessageBox>
-        <button onClick={() => changeShow()} style={{ backgroundColor: '#3c7eff', color: 'white', padding: '10px 20px', borderRadius: '5px', border: 'none' }}>Left Title</button>
+        <button onClick={() => changeShow()} style={{ backgroundColor: '#3c7eff', color: 'white', width: "80px", height: "30px", borderRadius: '5px', border: 'none', padding: "5px 10px" }}>Left Title</button>
       </div>
 
       <div>
@@ -45,7 +45,7 @@ export default () => {
         >
           You can customize modal body text by the current situation. This modal will be closed immediately once you press the OK button.
         </MessageBox>
-        <button onClick={() => changeShow()} style={{ backgroundColor: '#3c7eff', color: 'white', padding: '10px 20px', borderRadius: '5px', border: 'none' }}>Center Title</button>
+        <button onClick={() => changeShow()} style={{ backgroundColor: '#3c7eff', color: 'white', width: "80px", height: "30px", borderRadius: '5px', border: 'none', padding: "5px 10px" }}>Center Title</button>
       </div>
     </div>
   )
