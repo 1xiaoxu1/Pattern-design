@@ -1,29 +1,27 @@
 ---
 title: BackToTop 返回顶部
 nav:
-  title: Notice通知
-  path: /component
+    title: Other其他
+    path: /component
 group:
-  title: Notice通知
-  path: /component/Notice
+    title: Other其他
+    path: /component/Other
 ---
 
 # BackToTop 返回顶部
+返回页面或者容器顶部的按钮。
 
-> 返回页面顶部的操作按钮
 
-### 基础用法
+## 何时使用
+当页面内容区域较长时。</br>
+当用户需要频繁返回顶部查看内容时。
 
-> 滑动页面即可看到右下方的按钮。
+## 基本使用
 
-<code src="./demo/index1.tsx" />
+<code src="./demos/index1.tsx"/>
 
-### 显示位置
+## 自定义样式和位置
 
-> 显示区域被固定为 40px \* 40px 的区域, 其中的内容可支持自定义。
+<code src="./demos/index2.tsx"/>
 
-<code src="./demo/index2.tsx" />
-
-### BackToTop 参数说明
-
-<API></API>
+<API/>
