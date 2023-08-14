@@ -1,4 +1,4 @@
-# pattern-el
+# pattern-design
 
 ## Getting Started
 
