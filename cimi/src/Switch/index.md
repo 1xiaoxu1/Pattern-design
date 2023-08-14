@@ -1,5 +1,5 @@
 ---
-title: Switch
+title: Switch 开关
 nav:
   title: Form表单
   path: /component
