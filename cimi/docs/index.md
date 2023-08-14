@@ -3,8 +3,8 @@ hero:
   title: Pattern Design
   desc: 一套易用的轻量级的React UI 组件库
   actions:
-    - text: Getting Started
-      link: /component/button
+    - text: Getting
+      link: /component/Basic
 features:
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
     title: 开箱即用
@@ -15,8 +15,7 @@ features:
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/d1ee0c6f-5aed-4a45-a507-339a4bfe076c/k7bjsocq_w144_h144.png
     title: 多方支持
     desc: 支持React / React Native
-footer: Open-source MIT Licensed | Copyright © 2020<br />P(https://github.com/1xiaoxu1/Pattern-ui.git)
----
-## Pattern Design
+footer: Open-source MIT Licensed | Copyright © 2023<br />P(https://github.com/1xiaoxu1/Pattern-design.git)
 
-##### 易用于多端开发
+---
+
