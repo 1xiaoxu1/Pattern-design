@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Progress from '..';
-import '../Progress.module.less';
+import css from '../Progress.module.less';
 import Button from '../../Button';
 export default function ProgressDemo() {
   const [percent, setPercent] = useState(30);
@@ -14,8 +14,8 @@ export default function ProgressDemo() {
   };
   return (
     <div>
-      <Button onClick={decline} >-</Button>
-      <Button onClick={increase}>+</Button>
+      <Button onClick={decline} className={css.btn}>-</Button>
+      <Button onClick={increase} className={css.btn}>+</Button>
       <Progress percent={percent} status="success"></Progress>
     </div>
   );

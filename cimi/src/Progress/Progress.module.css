@@ -68,7 +68,7 @@
     width: 100%;
   }
 }
-Button {
+.btn {
   width: 30px;
   height: 30px;
   display: flex;
