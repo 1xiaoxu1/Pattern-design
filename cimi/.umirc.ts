@@ -2,14 +2,13 @@
  * 文档的配置文件,也可以在 .umi/dumi/config.json中配置
  */
 import { defineConfig } from 'dumi';
-
 export default defineConfig({
   title: 'pattern-design', // 网站标题名
   // 网站标题旁边图片
   favicon:
-    'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
+    'https://p0.ssl.qhimgs1.com/sdr/400__/t01a03bc9a27b830fca.png',
   // 页面上展示的logo的图片
-  logo: 'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
+  logo: 'https://p0.ssl.qhimgs1.com/sdr/400__/t01a03bc9a27b830fca.png',
   // 打包发布上线的 文件包名字
   outputPath: 'docs-dist',
   // 配置导航条模式 // 默认纵向，
@@ -53,7 +52,7 @@ export default defineConfig({
     },
     {
       title: 'GitHub',
-      path: 'https://github.com',
+      path: 'https://github.com/1xiaoxu1/Pattern-ui.git',
     },
   ],
 });
